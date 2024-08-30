@@ -24,7 +24,13 @@ Make it easier to target low-end devices while progressively adding high-end-onl
 
 ## Installation
 
-`npm i react-performance-hooks` or `yarn add react-performance-hooks`
+```bash
+npm i react-performance-hooks
+```
+or
+```bash
+yarn add react-performance-hooks
+```
 
 ## Usage
 
