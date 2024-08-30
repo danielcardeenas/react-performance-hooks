@@ -1,6 +1,6 @@
 {
   "name": "react-performance-hooks",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Give users a great experience best suited to their device and network constraints",
   "repository": "https://github.com/danielcardeenas/react-performance-hooks",
   "author": "Daniel Cardenas, Google Chrome",
@@ -8,9 +8,6 @@
   "private": false,
   "main": "build/index.js",
   "source": "index.ts",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
