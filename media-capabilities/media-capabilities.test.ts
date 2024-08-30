@@ -34,7 +34,7 @@ describe("useMediaCapabilitiesDecodingInfo", () => {
   test("should return supported flag on unsupported platforms", () => {
     const {
       useMediaCapabilitiesDecodingInfo,
-    } = require("./media-capabilities");
+    } = require("./");
     const { result } = renderHook(() =>
       useMediaCapabilitiesDecodingInfo(mediaDecodingConfig)
     );
@@ -45,7 +45,7 @@ describe("useMediaCapabilitiesDecodingInfo", () => {
   test("should return supported flag on unsupported platforms and no config given", () => {
     const {
       useMediaCapabilitiesDecodingInfo,
-    } = require("./media-capabilities");
+    } = require("./");
     const { result } = renderHook(() => useMediaCapabilitiesDecodingInfo());
 
     expect(result.current.supported).toEqual(false);
@@ -60,7 +60,7 @@ describe("useMediaCapabilitiesDecodingInfo", () => {
 
     const {
       useMediaCapabilitiesDecodingInfo,
-    } = require("./media-capabilities");
+    } = require("./");
     const { result } = renderHook(() =>
       useMediaCapabilitiesDecodingInfo(
         mediaDecodingConfig,
@@ -90,7 +90,7 @@ describe("useMediaCapabilitiesDecodingInfo", () => {
 
     const {
       useMediaCapabilitiesDecodingInfo,
-    } = require("./media-capabilities");
+    } = require("./");
 
     try {
       const { result } = renderHook(() => useMediaCapabilitiesDecodingInfo());
@@ -117,7 +117,7 @@ describe("useMediaCapabilitiesDecodingInfo", () => {
 
     const {
       useMediaCapabilitiesDecodingInfo,
-    } = require("./media-capabilities");
+    } = require("./");
 
     try {
       const { result } = renderHook(() =>
