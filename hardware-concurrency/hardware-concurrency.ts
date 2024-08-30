@@ -2,7 +2,7 @@ let initialHardwareConcurrency: {
   unsupported: boolean;
   numberOfLogicalProcessors?: number;
 };
-if (typeof navigator !== 'undefined' && 'hardwareConcurrency' in navigator) {
+if (typeof navigator !== "undefined" && "hardwareConcurrency" in navigator) {
   initialHardwareConcurrency = {
     unsupported: false,
     numberOfLogicalProcessors: navigator.hardwareConcurrency,
@@ -10,8 +10,10 @@ if (typeof navigator !== 'undefined' && 'hardwareConcurrency' in navigator) {
 } else {
   initialHardwareConcurrency = { unsupported: true };
 }
-const useHardwareConcurrency = () => {
-  return { ...initialHardwareConcurrency };
+const useHardwareConcurrency = (defaultParams?: {
+  numberOfLogicalProcessors: number;
+}) => {
+  return { ...defaultParams, ...initialHardwareConcurrency };
 };
 
 export { useHardwareConcurrency };

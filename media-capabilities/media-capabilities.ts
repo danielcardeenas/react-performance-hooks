@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 /**
  * @usecase 
@@ -42,10 +42,13 @@ const useMediaCapabilitiesDecodingInfo = (
   }
 ) => {
   const supported =
-    typeof navigator !== 'undefined' && 'mediaCapabilities' in navigator;
-  const [mediaCapabilitiesInfo, setMediaCapabilitiesInfo] = useState(
-    initialMediaCapabilitiesInfo
-  );
+    typeof navigator !== "undefined" && "mediaCapabilities" in navigator;
+  const [mediaCapabilitiesInfo, setMediaCapabilitiesInfo] = useState<{
+    keySystemAccess?: MediaKeySystemAccess | null;
+    powerEfficient?: boolean;
+    smooth?: boolean;
+    supported?: boolean;
+  }>(initialMediaCapabilitiesInfo || {});
 
   useEffect(() => {
     supported &&
