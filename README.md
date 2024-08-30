@@ -1,8 +1,12 @@
-# React Adaptive Loading Hooks &amp; Utilities &middot; ![](https://img.shields.io/github/license/GoogleChromeLabs/react-adaptive-hooks.svg) [![Build Status](https://travis-ci.org/GoogleChromeLabs/react-adaptive-hooks.svg?branch=master)](https://travis-ci.org/GoogleChromeLabs/react-adaptive-hooks) ![npm bundle size](https://img.shields.io/bundlephobia/minzip/react-adaptive-hooks)
+# React Adaptive Loading Hooks &amp; Utilities &middot; 
 
-> This is a fork of [GoogleChromeLabs/react-adaptive-hooks](https://github.com/GoogleChromeLabs/react-adaptive-hooks). It adds Typescript support and latest version of React
+![](https://img.shields.io/github/license/danielcardeenas/react-performance-hooks.svg)
+[![npm version](https://img.shields.io/npm/v/react-performance-hooks.svg?color=blue)](https://www.npmjs.com/package/react-performance-hooks)
+![npm type definitions](https://img.shields.io/npm/types/react-performance-hooks)
 
 > Deliver experiences best suited to a user's device and network constraints (experimental)
+
+> This is a fork of [GoogleChromeLabs/react-adaptive-hooks](https://github.com/GoogleChromeLabs/react-adaptive-hooks). It adds Typescript support and latest version of React
 
 This is a suite of [React Hooks](https://reactjs.org/docs/hooks-overview.html) and utilities for adaptive loading based on a user's:
 
@@ -20,18 +24,18 @@ Make it easier to target low-end devices while progressively adding high-end-onl
 
 ## Installation
 
-`npm i react-adaptive-hooks --save` or `yarn add react-adaptive-hooks`
+`npm i react-performance-hooks` or `yarn add react-performance-hooks`
 
 ## Usage
 
 You can import the hooks you wish to use as follows:
 
 ```js
-import { useNetworkStatus } from 'react-adaptive-hooks/network';
-import { useSaveData } from 'react-adaptive-hooks/save-data';
-import { useHardwareConcurrency } from 'react-adaptive-hooks/hardware-concurrency';
-import { useMemoryStatus } from 'react-adaptive-hooks/memory';
-import { useMediaCapabilitiesDecodingInfo } from 'react-adaptive-hooks/media-capabilities';
+import { useNetworkStatus } from 'react-performance-hooks/network';
+import { useSaveData } from 'react-performance-hooks/save-data';
+import { useHardwareConcurrency } from 'react-performance-hooks/hardware-concurrency';
+import { useMemoryStatus } from 'react-performance-hooks/memory';
+import { useMediaCapabilitiesDecodingInfo } from 'react-performance-hooks/media-capabilities';
 ```
 
 and then use them in your components. Examples for each hook and utility can be found below:
@@ -43,7 +47,7 @@ and then use them in your components. Examples for each hook and utility can be 
 ```js
 import React from 'react';
 
-import { useNetworkStatus } from 'react-adaptive-hooks/network';
+import { useNetworkStatus } from 'react-performance-hooks/network';
 
 const MyComponent = () => {
   const { effectiveConnectionType } = useNetworkStatus();
@@ -88,7 +92,7 @@ const { effectiveConnectionType } = useNetworkStatus(initialEffectiveConnectionT
 ```js
 import React from 'react';
 
-import { useSaveData } from 'react-adaptive-hooks/save-data';
+import { useSaveData } from 'react-performance-hooks/save-data';
 
 const MyComponent = () => {
   const { saveData } = useSaveData();
@@ -117,7 +121,7 @@ const { saveData } = useSaveData(initialSaveData);
 ```js
 import React from 'react';
 
-import { useHardwareConcurrency } from 'react-adaptive-hooks/hardware-concurrency';
+import { useHardwareConcurrency } from 'react-performance-hooks/hardware-concurrency';
 
 const MyComponent = () => {
   const { numberOfLogicalProcessors } = useHardwareConcurrency();
@@ -138,7 +142,7 @@ const MyComponent = () => {
 ```js
 import React from 'react';
 
-import { useMemoryStatus } from 'react-adaptive-hooks/memory';
+import { useMemoryStatus } from 'react-performance-hooks/memory';
 
 const MyComponent = () => {
   const { deviceMemory } = useMemoryStatus();
@@ -169,7 +173,7 @@ const { deviceMemory } = useMemoryStatus(initialMemoryStatus);
 ```js
 import React from 'react';
 
-import { useMediaCapabilitiesDecodingInfo } from 'react-adaptive-hooks/media-capabilities';
+import { useMediaCapabilitiesDecodingInfo } from 'react-performance-hooks/media-capabilities';
 
 const webmMediaDecodingConfig = {
   type: 'file', // 'record', 'transmission', or 'media-source'
@@ -208,7 +212,7 @@ Deliver a light, interactive core experience to users and progressively add high
 ```js
 import React, { Suspense, lazy } from 'react';
 
-import { useNetworkStatus } from 'react-adaptive-hooks/network';
+import { useNetworkStatus } from 'react-performance-hooks/network';
 
 const Full = lazy(() => import(/* webpackChunkName: "full" */ './Full.js'));
 const Light = lazy(() => import(/* webpackChunkName: "light" */ './Light.js'));
@@ -303,7 +307,7 @@ import {
   useHardwareConcurrency,
   useMemoryStatus,
   useMediaCapabilitiesDecodingInfo
-} from 'react-adaptive-hooks/dist/index.umd.js';
+} from 'react-performance-hooks/dist/index.umd.js';
 ```
 
 ## Browser Support
