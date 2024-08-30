@@ -3,7 +3,7 @@
 ![](https://img.shields.io/github/license/danielcardeenas/react-performance-hooks.svg)
 [![npm version](https://img.shields.io/npm/v/react-performance-hooks.svg?color=blue)](https://www.npmjs.com/package/react-performance-hooks)
 ![size](https://img.shields.io/badge/size-1.4kb-blue)
-![gzip](https://img.shields.io/badge/size-650b-blue)
+![size](https://img.shields.io/badge/gzip-650b-blue)
 
 > Deliver experiences best suited to a user's device and network constraints (experimental)
 
