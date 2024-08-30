@@ -42,7 +42,13 @@ if (!unsupported) {
   memoryStatus = { unsupported };
 }
 
-const useMemoryStatus = (initialMemoryStatus?: { deviceMemory: number }) => {
+/**
+ * Utility for adapting based on the user's device memory (RAM)
+ * `deviceMemory` values can be the approximate amount of device memory in gigabytes.
+ * @param initialMemoryStatus
+ * @returns
+ */
+const useMemoryStatus = (initialMemoryStatus?: MemoryStatus): MemoryStatus => {
   return unsupported && initialMemoryStatus
     ? { ...memoryStatus, ...initialMemoryStatus }
     : { ...memoryStatus };

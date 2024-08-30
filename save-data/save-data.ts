@@ -1,5 +1,5 @@
 declare namespace navigator {
-  export let connection: {
+  const connection: {
     downlink: number;
     effectiveType: string;
     onchange: any;
@@ -10,6 +10,11 @@ declare namespace navigator {
 
 let unsupported;
 
+/**
+ * Utility for adapting based on the user's browser Data Saver preferences.
+ * @param initialSaveData 
+ * @returns 
+ */
 const useSaveData = (initialSaveData = null) => {
   if (
     typeof navigator !== 'undefined' &&

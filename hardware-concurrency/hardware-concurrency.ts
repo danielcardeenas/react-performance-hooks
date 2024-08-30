@@ -1,3 +1,8 @@
+/**
+ * Utility for adapting to the number of logical CPU processor cores on the user's device.
+ * @param defaultParams 
+ * @returns 
+ */
 const useHardwareConcurrency = (defaultParams?: {
   numberOfLogicalProcessors: number;
 }) => {
